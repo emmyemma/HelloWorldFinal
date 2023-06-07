@@ -2,6 +2,6 @@
     <script src="https://curious-unicorn-fyf731-dev-ed.trailblaze.lightning.force.com/lightning/lightning.out.js"></script>
     <div data-lightning-out="true"></div>
     <script>
-        $Lightning.use("c:HelloWorldApp", $Lightning.createComponent("c:HelloWorld"), "https://curious-unicorn-fyf731-dev-ed.lightning.force.com"); 
+        $Lightning.use("c:HelloWorldApp",() => { $Lightning.createComponent("c:HelloWorld") }, "https://curious-unicorn-fyf731-dev-ed.lightning.force.com"); 
     </script>
 </html>
