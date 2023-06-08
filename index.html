@@ -1,7 +1,25 @@
 <html>
-    <script src="https://curious-unicorn-fyf731-dev-ed.trailblaze.lightning.force.com/lightning/lightning.out.js"></script>
+    <script src="https://curious-unicorn-fyf731-dev-ed.trailblaze.my.site.com/lightning/lightning.out.js"></script>
     <div data-lightning-out="true"></div>
     <script>
-        $Lightning.use("c:HelloWorldApp",() => { $Lightning.createComponent("c:HelloWorld") }, "https://curious-unicorn-fyf731-dev-ed.lightning.force.com"); 
+        const appname = 'c:HelloWorldApp';
+        const componentname = 'c:helloWorld';
+        const lightningendpoint = curious-unicorn-fyf731-dev-ed.trailblaze.my.site.com;
+        const targetElement = document.querySelector("[data-lightning-out]");
+        const componentAttributes = {};
+        $Lightning.use(
+            appname,
+            function() {
+                $Lightning.createComponent(
+                    componentname,
+                    componentAttributes,
+                    targetElement,
+                    function(cmp) {
+                        console.log('lightning component created');
+                    }
+                );
+            },
+            lightningendpoint
+        ); 
     </script>
 </html>
